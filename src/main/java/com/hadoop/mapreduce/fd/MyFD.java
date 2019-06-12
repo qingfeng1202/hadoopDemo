@@ -1,6 +1,5 @@
 package com.hadoop.mapreduce.fd;
 
-import jdk.nashorn.internal.scripts.JO;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -22,6 +21,7 @@ public class MyFD {
         job.setJarByClass(MyFD.class);
         job.setJobName("friend");
 
+        // 设置输入输出路径
         Path inPath = new Path("/fd/input");
         FileInputFormat.addInputPath(job, inPath);
 
@@ -31,14 +31,17 @@ public class MyFD {
         }
         FileOutputFormat.setOutputPath(job, outPath);
 
+        //设置map相关参数
         job.setMapperClass(FMapper.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
 
+        //设置reduce相关参数
         job.setReducerClass(FReducer.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
 
         job.waitForCompletion(true);
-
     }
 
 
