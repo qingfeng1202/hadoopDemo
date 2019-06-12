@@ -88,7 +88,7 @@ public class HDFSApp {
     @Test
     public void copyFromLocalFile() throws Exception {
         Path localPath = new Path("C:\\Users\\qingfeng\\Desktop\\a.doc");
-        Path hdfsPath = new Path("/hdfsapi/test");
+        Path hdfsPath = new Path("/tq/input");
         fileSystem.copyFromLocalFile(localPath, hdfsPath);
     }
 
