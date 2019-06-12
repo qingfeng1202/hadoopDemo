@@ -86,7 +86,7 @@ public class MyWordCount {
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
         //提交作业
-        //job.waitForCompletion(true);
+        job.waitForCompletion(true);
 
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
