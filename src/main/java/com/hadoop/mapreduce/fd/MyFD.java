@@ -14,6 +14,10 @@ public class MyFD {
         //创建Configuration
         Configuration configuration = new Configuration();
 
+        configuration.set("mapreduce.app-submission.corss-paltform", "true");
+        configuration.set("mapreduce.framework.name", "local");
+
+
         //创建Job
         Job job = Job.getInstance(configuration);
 

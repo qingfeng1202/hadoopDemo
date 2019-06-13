@@ -29,12 +29,19 @@ public class StartRun {
 		paths.put("Step6Input", paths.get("Step5Output"));
 		paths.put("Step6Output", "/data/itemcf/output/step6");
 
-		Step1.run(conf, paths);
-		Step2.run(conf, paths);
+//		System.out.println("step1");
+//		Step1.run(conf, paths);
+//		System.out.println("step2");
+//		Step2.run(conf, paths);
+//		System.out.println("step3");
 //		Step3.run(conf, paths);
+//		System.out.println("step4");
 //		Step4.run(conf, paths);
+//		System.out.println("step5");
 //		Step5.run(conf, paths);
-//		Step6.run(conf, paths);
+//		System.out.println("step6");
+		Step6.run(conf, paths);
+		System.out.println("over");
 	}
 
 	public static Map<String, Integer> R = new HashMap<String, Integer>();

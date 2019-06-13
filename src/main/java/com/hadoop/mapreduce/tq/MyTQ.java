@@ -81,6 +81,10 @@ public class MyTQ {
         // 1.配置
         //创建Configuration
         Configuration conf = new Configuration();
+
+        conf.set("mapreduce.app-submission.corss-paltform", "true");
+        conf.set("mapreduce.framework.name", "local");
+
         //创建Job
         Job job = Job.getInstance(conf);
         // 设置job名字

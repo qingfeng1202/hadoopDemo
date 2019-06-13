@@ -45,7 +45,7 @@ public class HDFSApp {
      */
     @Test
     public void mkdir() throws Exception {
-        fileSystem.mkdirs(new Path("/hdfsapi/test"));
+        fileSystem.mkdirs(new Path("/data/itemcf/input"));
     }
 
     /**
@@ -87,8 +87,8 @@ public class HDFSApp {
      */
     @Test
     public void copyFromLocalFile() throws Exception {
-        Path localPath = new Path("C:\\Users\\qingfeng\\Desktop\\a.doc");
-        Path hdfsPath = new Path("/fd/input");
+        Path localPath = new Path("D:\\hadoopDemo\\data\\(sample)sam_tianchi_2014002_rec_tmall_log.csv");
+        Path hdfsPath = new Path("/data/itemcf/input");
         fileSystem.copyFromLocalFile(localPath, hdfsPath);
     }
 
@@ -149,7 +149,7 @@ public class HDFSApp {
     @Test
     public void delete() throws Exception{
         //true,表示递归删除
-        fileSystem.delete(new Path("/hdfsapi"), true);
+        fileSystem.delete(new Path("/fd/output"), true);
     }
 
 }

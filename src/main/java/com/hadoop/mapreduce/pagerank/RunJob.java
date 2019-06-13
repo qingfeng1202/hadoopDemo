@@ -52,7 +52,7 @@ public class RunJob {
 				
 				
 				Path inputPath = new Path("/data/pagerank/input/");
-				
+
 				if (i > 1) {
 					inputPath = new Path("/data/pagerank/output/pr" + (i - 1));
 				}
